@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[test]]></title>
+    <url>%2F2018%2F11%2F19%2Ftest%2F</url>
+    <content type="text"><![CDATA[This is a test测试]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Hello World]]></title>
     <url>%2F2018%2F11%2F18%2Fpost%2F</url>
     <content type="text"><![CDATA[这是我的第一个博文？]]></content>
