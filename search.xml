@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[Virtualenv]]></title>
     <url>%2F2018%2F11%2F20%2FVirtualenv%2F</url>
-    <content type="text"><![CDATA[&nbsp;Virtualenv 是一个创建隔绝Python环境的工具。Virtualenv创建一个包含所有必要的可执行文件的文件夹，用来使用Python工程所需的包。 安装1pip install virtualenv 创建虚拟环境 cd my_project_dirvirtualenv venv 激活虚拟环境 source venv/bin/activate 退出虚拟环境 deactivate 删除虚拟环境 rm -rf venv 创建环境时的一些参数 指定Python版本 virtualenv -p /usr/bin/python3 py3env 不带任何第三方包 virtualenv --no-site-packages venv]]></content>
+    <content type="text"><![CDATA[Virtualenv 是一个创建隔绝Python环境的工具。Virtualenv创建一个包含所有必要的可执行文件的文件夹，用来使用Python工程所需的包。 安装install virtualenv```123### 创建虚拟环境 cd my_project_dirvirtualenv venv123### 激活虚拟环境```source venv/bin/activate 退出虚拟环境123### 删除虚拟环境```rm -rf venv 创建环境时的一些参数 指定Python版本-ppy3env```1232. 不带任何第三方包```virtualenv --no-site-packages venv]]></content>
       <categories>
         <category>Python虚拟环境</category>
       </categories>
