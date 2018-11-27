@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[零碎知识点]]></title>
+    <url>%2F2018%2F11%2F27%2F%E9%9B%B6%E7%A2%8E%E7%9F%A5%E8%AF%86%E7%82%B9%2F</url>
+    <content type="text"><![CDATA[本篇文章，讲持续记录日常遇到的一些小知识点。 Foreign function interface由一种语言编写的代码，通过这种机制可以被其他语言所调用。通俗一点：比如之前用C实现了一个复杂的功能，但现在项目需要用Java完成。此时我们不需要重新造轮子，而是使用JNI技术(不同语言中FFI的叫法不同)，直接在Java中调用已经用C完成的代码。 相关链接：Foreign function interface、SWIG、What is language bingding?、Language binding Glue Code是自定义编写的程序，用于连接不兼容的软件组建。由胶水语言编写的胶水代码不实现程序要求的任何功能。常见的胶水语言：JavaScript、Perl、PHP、Python、Ruby等等。 比如Python很多模板中的功能使用C/C++实现的Python中调用C代码最简单的方法是用模块：ctypes 相关链接：Glue Code、What does Glue Language mean?、What is Glue Language GILGlobal Interpreter Lock，全局变量锁。作用是，限制多线程同时执行，保证同一时间内只有一个线程在执行。因为同一进程里线程是数据共享的，数据可能会同时被多个线程占用，造成数据混乱。GIL并不是Python的特性，而是因为历史原因，在实现Python解析器(CPython)时引入的概念，Python完全可以不依赖于GIL。Pyhon有多种解释器，比如常见的: CPython(基于C编写)IPython(基于CPython的交互式解释器)PyPy(采用JIT技术，提高代码执行速度)Jython(基于Java编写)IronPython(基于C#编写)。像其中的Jython就没有GIL。 影响 Python的多线程在多核CPU上，只对于IO密集型计算产生正面效果；而当有至少有一个CPU密集型线程存在，那么多线程效率会由于GIL而大幅下降。 解决方案 使用多进程，少用多线程，并通过队列的方式进行进程间的交互。 换用其他的解释器。 将关键部分用C/C++写成Python扩展，利用ctypes绕过GIL。(ctypes会在调用C函数前释放GIL) 相关链接: Python中的GIL详解、Python线程，GIL和ctypes]]></content>
+      <categories>
+        <category>Misc</category>
+      </categories>
+      <tags>
+        <tag>知识点</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[P、NP、NPC]]></title>
     <url>%2F2018%2F11%2F22%2FP%E3%80%81NP%E3%80%81NPC%2F</url>
     <content type="text"><![CDATA[千禧年大奖难题一：$P=NP$? P问题 如果一个问题可以找到一个能在多项式的时间里解决它的算法，那么这个问题就属于P问题。 NP问题 可以在多项式的时间里验证一个解的问题。 NPC问题 B是NPC问题当且仅当：(1)B是NP问题；(2)存在一个已知的NPC问题A，A能规约到B。 NP-hard问题 仅满足NPC问题定义的第二条。 归约 如果能找到这样一个变化法则，对程序A的任意一个输入，都能按这个法则变换成程序B的输入，使这两个程序的输出相同，那么我们说，问题A可归约为问题B “问题A可归约为问题B”有一个重要的直观意义：B的时间复杂度高于或者等于A的时间复杂度。一个问题归约为另一个问题，时间复杂度增加了，问题的应用范围也增大了。 NPC证明证明问题B是NPC问题的步骤： 证明B是NP问题 选择一个已知的NPC问题A 证明A可以归约到B 一些理解 通过归约的定义，可以联想到，如果我们对某些问题不断归约，我们能够不断寻找复杂度更高，但应用范围更广的算法来代替复杂度虽然低，但只能用于很小的一类问题的算法。 如果不断地约化上去，不断找到能“通吃”若干小NP问题的一个稍复杂的大NP问题，那么最后是否有可能找到一个时间复杂度最高，并且能“通吃”所有NP问题的这样一个超级NP问题，即NPC问题。 由一个NPC问题可以推导出其他的NPC问题，但如果只要任意一个NPC问题找到了一个多项式的算法，那么所有的NP问题都能用这个算法解决了，NP也就等于P了。 更详细内容参考文章: 什么是P问题、NP问题和NPC问题P问题、NP问题、NPC问题的概念及实例证明]]></content>
