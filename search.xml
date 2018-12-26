@@ -59,7 +59,7 @@
   <entry>
     <title><![CDATA[Hello Hexo]]></title>
     <url>%2F2018%2F11%2F18%2Fhello-hexo%2F</url>
-    <content type="text"><![CDATA[Hexo 常用的几个命令，介绍顺序即部署文件的指令顺序，有时候不需要hexo g。 Quick StartCreate a new post1$ hexo n "My New Post" hexo n 是 hexo new 的缩写，命令效果一致。 新建一篇标题为 My New Post的文章，因为标题中有空格，所有加上了双引号。 1$ hexo n page "aboutme" 新建一个标题为aboutme的页面，默认连接地址为主页地址/aboutme/。 页面不会出现在首页文章列表和归档中，也不支持设置分类和标签。 Run server1$ hexo s hexo s 是 hexo server 的缩写，命令效果一致。 启动本地服务器，用于预览主题。默认地址：http://localhost:4000 预览的同时可以修改文章内容或主题代码，保存后刷新页面即可。 Clean1$ hexo clean 清除缓存文件 db.json 和已生成的静态文件 public。 Generate static files1$ hexo g hexo g 是 hexo generate 的缩写，命令效果一致。 生成网站静态文件到默认设置的public文件夹。 Deploy to remote sites1$ hexo d hexo d 是 hexo deploy 的缩写，命令效果一致。 自动生成网站静态文件，并部署到设定的仓库。]]></content>
+    <content type="text"><![CDATA[Hexo 常用的几个命令，介绍顺序即部署文件的指令顺序，有时候不需要hexo g。 Quick StartCreate a new post1$ hexo n "My New Post" hexo n 是 hexo new 的缩写，命令效果一致。 新建一篇标题为 My New Post的文章，因为标题中有空格，所有加上了双引号。 1$ hexo n page "aboutme" 新建一个标题为aboutme的页面，默认连接地址为主页地址/aboutme/。 页面不会出现在首页文章列表和归档中，也不支持设置分类和标签。 Run server1$ hexo s hexo s 是 hexo server 的缩写，命令效果一致。 启动本地服务器，用于预览主题。默认地址：http://localhost:4000 预览的同时可以修改文章内容或主题代码，保存后刷新页面即可。 Clean1$ hexo clean 清除缓存文件 db.json 和已生成的静态文件 public。 Generate static files1$ hexo g hexo g 是 hexo generate 的缩写，命令效果一致。 生成网站静态文件到默认设置的public文件夹。 Deploy to remote sites1$ hexo d hexo d 是 hexo deploy 的缩写，命令效果一致。 自动生成网站静态文件，并部署到设定的仓库。 一般后两条合并执行hexo d -g]]></content>
       <categories>
         <category>介绍</category>
       </categories>
