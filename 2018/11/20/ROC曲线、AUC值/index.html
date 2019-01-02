@@ -90,7 +90,7 @@
 <meta property="og:image" content="https://raw.githubusercontent.com/ikangaroo/MarkdownPhotos/master/res/%E6%B7%B7%E6%B7%86%E7%9F%A9%E9%98%B5.jpg">
 <meta property="og:image" content="https://raw.githubusercontent.com/ikangaroo/MarkdownPhotos/master/res/ROC.jpg">
 <meta property="og:image" content="https://raw.githubusercontent.com/ikangaroo/MarkdownPhotos/master/res/ROC-3.jpg">
-<meta property="og:updated_time" content="2018-11-20T14:41:10.373Z">
+<meta property="og:updated_time" content="2019-01-02T11:48:33.741Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ROC曲线、AUC值">
 <meta name="twitter:description" content="二分类问题在机器学习中是一个常见的问题。ROC曲线和AUC值常被用来评价一个二值分类器的优劣">
@@ -403,6 +403,10 @@
 <li>真阴性(True Negative，TN)：检测健康，且实际健康；正确拒绝的非匹配数目</li>
 <li>假阴性(False Negative，FN)：检测健康，但实际不健康；漏报，没有正确找到的匹配的数目</li>
 </ol>
+<p>$\text{accuracy} = \frac{TP+TN}{TP+TN+FP+FN}$</p>
+<p>$\text{precision} = \frac{TP}{TP+FP}$</p>
+<p>$\text{recall} = \frac{TP}{TP+FN}$ </p>
+<p>$F_1 = 2 \ast \frac{\text{precision} * \text{recall}}{\text{precision}+\text{recall}}$</p>
 <h3 id="ROC曲线"><a href="#ROC曲线" class="headerlink" title="ROC曲线"></a>ROC曲线</h3><p>接收者操作特征曲线(receiver operating characteristic curve)，是反映敏感性和特异性连续变量的综合指标，ROC曲线上每个点反映着对用一个信号刺激的感受性。</p>
 <p><strong>横轴</strong> : 负正类率(false postive rate FPR)特异度，划分实例中所有负例占所有负例的比例；(1-Specificity)<br><strong>纵轴</strong> : 真正类率(true postive rate TPR)灵敏度，Sensitivity(正类覆盖率)</p>
 <p><code>TPR: TP/(TP+FN)</code>: 代表分类器预测的正类中实际正实例占所有正实例的比例。Sensitivity</p>
@@ -639,7 +643,7 @@
         <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
-<div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+<div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
   <span class="with-love">
     <i class="fa fa-heart" aria-hidden="true"></i>
   </span>
