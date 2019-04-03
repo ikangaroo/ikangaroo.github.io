@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="Kangaroo">
 <meta property="og:description" content="本篇文章，将持续记录日常遇到的一些小知识点。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-11-28T12:07:00.065Z">
+<meta property="og:updated_time" content="2019-01-04T01:04:02.108Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="零碎知识点">
 <meta name="twitter:description" content="本篇文章，将持续记录日常遇到的一些小知识点。">
@@ -398,7 +398,7 @@
 <p>Python的多线程在多核CPU上，只对于IO密集型计算产生正面效果；而当有至少有一个CPU密集型线程存在，那么多线程效率会由于GIL而大幅下降。</p>
 </blockquote>
 <h4 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h4><ol>
-<li>使用多线程$+$协程的方法</li>
+<li>使用多进程$+$协程的方法</li>
 <li>换用其他的解释器。</li>
 <li>将关键部分用C/C++写成Python扩展，利用ctypes绕过GIL。(ctypes会在调用C函数前释放GIL)</li>
 </ol>
@@ -534,7 +534,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">9</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -545,7 +545,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -556,7 +556,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>

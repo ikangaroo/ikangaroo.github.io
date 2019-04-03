@@ -1,6 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Python实用的内置库函数]]></title>
+    <url>%2F2019%2F04%2F03%2FPython%E5%AE%9E%E7%94%A8%E7%9A%84%E5%86%85%E7%BD%AE%E5%BA%93%E5%87%BD%E6%95%B0%2F</url>
+    <content type="text"><![CDATA[记录一些经常碰到，并且实用的Python标准库或者第三方库 Standard Libraryfunctools@functools.lru_cache(maxsize=128, typed=False)&#8195;&#8195;作为装饰器，它的作用主要用来做缓存，可以把之前函数调用的结果保存起来，避免重复运算，并且可以设置缓存的大小、清空缓存 maxize = None，表示此时缓存可以无限增加 cache_info()，可以用来查看当前缓存信息 cache_clear()，可以清空当前缓存中的内容 hits 表示在缓存中找到的次数，misses 表示未在缓存中的次数 1234567891011121314151617181920212223242526272829303132333435from functools import lru_cache@lru_cache(None)def fib(n): if n &lt; 2: return n return fib(n-1) + fib(n-2)def fib2(n): if n &lt; 2: return n return fib2(n-1) + fib2(n-2)a = time.clock()[fib(n) for n in range(30)]b = time.clock()print(b-a)a = time.clock()[fib2(n) for n in range(30)]b = time.clock()print(b-a)----------------------------0.00016000000000104820.5012759999999972fib.cache_info()-----------------------------CacheInfo(hits=56, misses=30, maxsize=None, currsize=30)fib.cache_clear()fib.cache_info()-----------------------------CacheInfo(hits=0, misses=0, maxsize=None, currsize=0)]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>库函数</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Books]]></title>
+    <url>%2F2019%2F01%2F03%2FBooks%2F</url>
+    <content type="text"><![CDATA[一些关于机器学习和深度学习的书籍 To Read Pattern Recognition and Machine Learning Reading Deep Learning with Python Hands-On Machine Learning with Scikit-Learn &amp; TensorFLow Deep Learning DoneOthers Python for Data Analysis]]></content>
+      <categories>
+        <category>机器学习</category>
+      </categories>
+      <tags>
+        <tag>Books</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[SSR配置]]></title>
     <url>%2F2018%2F12%2F27%2FSSR%E9%85%8D%E7%BD%AE%2F</url>
     <content type="text"><![CDATA[Ubuntu科学上网 使用GUI客户端下载electron-ssr最新的deb安装包，使用下面命令安装 1sudo dpkg -i electron-ssr-0.2.5.deb 然后在GUI中选择服务器-&gt;订阅管理-&gt;直接添加订阅地址 chrome浏览器添加Proxy SwitchyOmega插件，简单设置即可。 终端走代理方法1在终端运行命令 1export http_proxy=http://localhost:port 只对当前终端有效 方法2把代理服务器地址写入shell配置文件.bashrc或者.zshrc12export http_proxy="http://localhost:port"export https_proxy="http://localhost:port" 保存后运行123source ~/.bashrc或者source ~/.zshrc 如何在Ubuntu上搭建使用SSR梯子 使用命令行 配置.json文件 端口设置 12sslocal -c /etc/shadowsocks.jsonsudo /etc/init.d/privoxy start 相对于第一种太麻烦，放弃]]></content>
@@ -14,7 +36,7 @@
   <entry>
     <title><![CDATA[零碎知识点]]></title>
     <url>%2F2018%2F11%2F27%2F%E9%9B%B6%E7%A2%8E%E7%9F%A5%E8%AF%86%E7%82%B9%2F</url>
-    <content type="text"><![CDATA[本篇文章，将持续记录日常遇到的一些小知识点。 Foreign function interface由一种语言编写的代码，通过这种机制可以被其他语言所调用。通俗一点：比如之前用C实现了一个复杂的功能，但现在项目需要用Java完成。此时我们不需要重新造轮子，而是使用JNI技术(不同语言中FFI的叫法不同)，直接在Java中调用已经用C完成的代码。 相关链接：Foreign function interface、SWIG、What is language bingding?、Language binding Glue Code是自定义编写的程序，用于连接不兼容的软件组建。由胶水语言编写的胶水代码不实现程序要求的任何功能。常见的胶水语言：JavaScript、Perl、PHP、Python、Ruby等等。 比如Python很多模板中的功能使用C/C++实现的Python中调用C代码最简单的方法是用模块：ctypes 相关链接：Glue Code、What does Glue Language mean?、What is Glue Language GILGlobal Interpreter Lock，全局变量锁。作用是，限制多线程同时执行，保证同一时间内只有一个线程在执行。因为同一进程里线程是数据共享的，数据可能会同时被多个线程占用，造成数据混乱。GIL并不是Python的特性，而是因为历史原因，在实现Python解析器(CPython)时引入的概念，Python完全可以不依赖于GIL。Pyhon有多种解释器，比如常见的: CPython(基于C编写)IPython(基于CPython的交互式解释器)PyPy(采用JIT技术，提高代码执行速度)Jython(基于Java编写)IronPython(基于C#编写)。 像其中的Jython就没有GIL。 影响 Python的多线程在多核CPU上，只对于IO密集型计算产生正面效果；而当有至少有一个CPU密集型线程存在，那么多线程效率会由于GIL而大幅下降。 解决方案 使用多线程$+$协程的方法 换用其他的解释器。 将关键部分用C/C++写成Python扩展，利用ctypes绕过GIL。(ctypes会在调用C函数前释放GIL) 相关链接: Python中的GIL详解、Python线程，GIL和ctypes]]></content>
+    <content type="text"><![CDATA[本篇文章，将持续记录日常遇到的一些小知识点。 Foreign function interface由一种语言编写的代码，通过这种机制可以被其他语言所调用。通俗一点：比如之前用C实现了一个复杂的功能，但现在项目需要用Java完成。此时我们不需要重新造轮子，而是使用JNI技术(不同语言中FFI的叫法不同)，直接在Java中调用已经用C完成的代码。 相关链接：Foreign function interface、SWIG、What is language bingding?、Language binding Glue Code是自定义编写的程序，用于连接不兼容的软件组建。由胶水语言编写的胶水代码不实现程序要求的任何功能。常见的胶水语言：JavaScript、Perl、PHP、Python、Ruby等等。 比如Python很多模板中的功能使用C/C++实现的Python中调用C代码最简单的方法是用模块：ctypes 相关链接：Glue Code、What does Glue Language mean?、What is Glue Language GILGlobal Interpreter Lock，全局变量锁。作用是，限制多线程同时执行，保证同一时间内只有一个线程在执行。因为同一进程里线程是数据共享的，数据可能会同时被多个线程占用，造成数据混乱。GIL并不是Python的特性，而是因为历史原因，在实现Python解析器(CPython)时引入的概念，Python完全可以不依赖于GIL。Pyhon有多种解释器，比如常见的: CPython(基于C编写)IPython(基于CPython的交互式解释器)PyPy(采用JIT技术，提高代码执行速度)Jython(基于Java编写)IronPython(基于C#编写)。 像其中的Jython就没有GIL。 影响 Python的多线程在多核CPU上，只对于IO密集型计算产生正面效果；而当有至少有一个CPU密集型线程存在，那么多线程效率会由于GIL而大幅下降。 解决方案 使用多进程$+$协程的方法 换用其他的解释器。 将关键部分用C/C++写成Python扩展，利用ctypes绕过GIL。(ctypes会在调用C函数前释放GIL) 相关链接: Python中的GIL详解、Python线程，GIL和ctypes]]></content>
       <categories>
         <category>Misc</category>
       </categories>

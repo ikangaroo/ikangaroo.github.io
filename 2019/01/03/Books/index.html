@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="机器学习,">
+  <meta name="keywords" content="Books,">
 
 
 
@@ -79,22 +79,18 @@
 
 
 
-<meta name="description" content="二分类问题在机器学习中是一个常见的问题。ROC曲线和AUC值常被用来评价一个二值分类器的优劣">
-<meta name="keywords" content="机器学习">
+<meta name="description" content="一些关于机器学习和深度学习的书籍">
+<meta name="keywords" content="Books">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ROC曲线、AUC值">
-<meta property="og:url" content="http://yoursite.com/2018/11/20/ROC曲线、AUC值/index.html">
+<meta property="og:title" content="Books">
+<meta property="og:url" content="http://yoursite.com/2019/01/03/Books/index.html">
 <meta property="og:site_name" content="Kangaroo">
-<meta property="og:description" content="二分类问题在机器学习中是一个常见的问题。ROC曲线和AUC值常被用来评价一个二值分类器的优劣">
+<meta property="og:description" content="一些关于机器学习和深度学习的书籍">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://raw.githubusercontent.com/ikangaroo/MarkdownPhotos/master/res/%E6%B7%B7%E6%B7%86%E7%9F%A9%E9%98%B5.jpg">
-<meta property="og:image" content="https://raw.githubusercontent.com/ikangaroo/MarkdownPhotos/master/res/ROC.jpg">
-<meta property="og:image" content="https://raw.githubusercontent.com/ikangaroo/MarkdownPhotos/master/res/ROC-3.jpg">
-<meta property="og:updated_time" content="2019-01-02T11:48:33.741Z">
+<meta property="og:updated_time" content="2019-01-03T13:16:31.322Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ROC曲线、AUC值">
-<meta name="twitter:description" content="二分类问题在机器学习中是一个常见的问题。ROC曲线和AUC值常被用来评价一个二值分类器的优劣">
-<meta name="twitter:image" content="https://raw.githubusercontent.com/ikangaroo/MarkdownPhotos/master/res/%E6%B7%B7%E6%B7%86%E7%9F%A9%E9%98%B5.jpg">
+<meta name="twitter:title" content="Books">
+<meta name="twitter:description" content="一些关于机器学习和深度学习的书籍">
 
 
 
@@ -124,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/11/20/ROC曲线、AUC值/">
+  <link rel="canonical" href="http://yoursite.com/2019/01/03/Books/">
 
 
 
 
 
-  <title>ROC曲线、AUC值 | Kangaroo</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title>Books | Kangaroo</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
   
 
 
@@ -295,7 +291,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/20/ROC曲线、AUC值/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/03/Books/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Kangaroo">
@@ -312,7 +308,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">ROC曲线、AUC值</h1>
+          <h1 class="post-title" itemprop="name headline">Books</h1>
         
 
         <div class="post-meta">
@@ -324,8 +320,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-20T20:21:00+08:00">
-                2018-11-20
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-01-03T21:01:34+08:00">
+                2019-01-03
               </time>
             
 
@@ -384,56 +380,19 @@
       
 
       
-        <p>二分类问题在机器学习中是一个常见的问题。ROC曲线和AUC值常被用来评价一个二值分类器的优劣</p>
+        <p>一些关于机器学习和深度学习的书籍</p>
 <a id="more"></a>
-<hr>
-<ol>
-<li>二分类器计算出每个样本为正的概率。</li>
-<li>以每个概率为阈值，大于阈值认为正样本，小于阈值认为负样本。分别计算出FPS和TPS。</li>
-<li>以FPS为横坐标，TPS为纵坐标。</li>
-<li>将步骤2计算得到的结果在坐标上画出，用线相连，即为ROC。</li>
-<li>ROC曲线，x=1, y=0 所围成的面积，为AUC。</li>
-<li>针对相同数据，AUC值大的分类器效果更好。</li>
-</ol>
-<hr>
-<h3 id="混淆矩阵"><a href="#混淆矩阵" class="headerlink" title="混淆矩阵"></a>混淆矩阵</h3><p>对于二分类问题，可将样本根据其真实类别和学习器预测类别的组合划分为TP、FP、TN、FN四种情况：<br><img src="https://raw.githubusercontent.com/ikangaroo/MarkdownPhotos/master/res/%E6%B7%B7%E6%B7%86%E7%9F%A9%E9%98%B5.jpg" alt="混淆矩阵"></p>
-<ol>
-<li>真阳性(True Positive, TP): 检测不健康，且实际不健康； 正确肯定的匹配数目</li>
-<li>假阳性(False Positive，FP)：检测不健康，但实际健康；误报，给出的匹配是不正确的</li>
-<li>真阴性(True Negative，TN)：检测健康，且实际健康；正确拒绝的非匹配数目</li>
-<li>假阴性(False Negative，FN)：检测健康，但实际不健康；漏报，没有正确找到的匹配的数目</li>
-</ol>
-<p>$\text{accuracy} = \frac{TP+TN}{TP+TN+FP+FN}$</p>
-<p>$\text{precision} = \frac{TP}{TP+FP}$</p>
-<p>$\text{recall} = \frac{TP}{TP+FN}$ </p>
-<p>$F_1 = 2 \ast \frac{\text{precision} * \text{recall}}{\text{precision}+\text{recall}}$</p>
-<h3 id="ROC曲线"><a href="#ROC曲线" class="headerlink" title="ROC曲线"></a>ROC曲线</h3><p>接收者操作特征曲线(receiver operating characteristic curve)，是反映敏感性和特异性连续变量的综合指标，ROC曲线上每个点反映着对用一个信号刺激的感受性。</p>
-<p><strong>横轴</strong> : 负正类率(false postive rate FPR)特异度，划分实例中所有负例占所有负例的比例；(1-Specificity)<br><strong>纵轴</strong> : 真正类率(true postive rate TPR)灵敏度，Sensitivity(正类覆盖率)</p>
-<p><code>TPR: TP/(TP+FN)</code>: 代表分类器预测的正类中实际正实例占所有正实例的比例。Sensitivity</p>
-<p><code>FPR: FP/(FP+TN)</code>: 代表分类器预测的正类中实际负实例占所有负实例的比例。1-Specificity</p>
-<p><code>TNR: TN/(FP+TN)</code>: 代表分类器预测的负类中实际负实例占所有负实例的比例，TNR=1-FPR。Specificity</p>
-<p>如下面这幅图，(a)图中实线为ROC曲线，线上每个点对应一个阈值：</p>
-<blockquote>
-<p>阈值最大时，对应坐标为 (0,0)<br>阈值最小时，对应坐标为 (1,1)</p>
-</blockquote>
-<p><img src="https://raw.githubusercontent.com/ikangaroo/MarkdownPhotos/master/res/ROC.jpg" alt="ROC"></p>
-<p>理想目标：<strong>TPR=1，FPR=0, 即图中(0,1)点，故ROC曲线越靠拢(0,1)点，越偏离45度对角线越好，Sensitivity、Specificity越大效果越好</strong></p>
-<h3 id="AUC"><a href="#AUC" class="headerlink" title="AUC"></a>AUC</h3><p>AUC(Area under Curve)：Roc曲线下的面积，介于0和1之间。</p>
-<h4 id="为什么AUC值越大，分类器的分类效果越好"><a href="#为什么AUC值越大，分类器的分类效果越好" class="headerlink" title="为什么AUC值越大，分类器的分类效果越好"></a>为什么AUC值越大，分类器的分类效果越好</h4><blockquote>
-<p>当分类器效果很好时，例如，实际是正类，预测其为正类的概率都为0.8-0.9左右，实际为负类，预测其为正类的概率都为0.1-0.2，可想而知，当阈值有大变小时，有如下规律：</p>
-</blockquote>
-<ol>
-<li>FPS=0，TPS由接近于0的值变为接近于1</li>
-<li>FPS=0，TPS=1 (相当于一个临界情况)</li>
-<li>FPS由接近于0的值变为接近于1的值，TPS=1</li>
-</ol>
-<p><strong>首先AUC值是一个概率值，当你随机挑选一个正样本以及负样本，当前的分类算法根据计算得到的Score值将这个正样本排在负样本前面的概率就是AUC值，AUC值越大，当前分类算法越有可能将正样本排在负样本前面，从而能够更好地分类。</strong></p>
-<h3 id="ROC优点"><a href="#ROC优点" class="headerlink" title="ROC优点"></a>ROC优点</h3><blockquote>
-<p>当测试集中的正负样本的分布变换的时候，ROC曲线能够保持不变。</p>
-</blockquote>
-<p>在实际的数据集中经常会出现样本类不平衡，即正负样本比例差距较大，而且测试数据中的正负样本也可能随着时间变化。</p>
-<p>下图是ROC曲线和Presision-Recall曲线的对比：</p>
-<p><img src="https://raw.githubusercontent.com/ikangaroo/MarkdownPhotos/master/res/ROC-3.jpg" alt="ROC"></p>
+<h3 id="To-Read"><a href="#To-Read" class="headerlink" title="To Read"></a>To Read</h3><ul>
+<li>Pattern Recognition and Machine Learning</li>
+</ul>
+<h3 id="Reading"><a href="#Reading" class="headerlink" title="Reading"></a>Reading</h3><ul>
+<li>Deep Learning with Python</li>
+<li>Hands-On Machine Learning with Scikit-Learn &amp; TensorFLow</li>
+<li>Deep Learning</li>
+</ul>
+<h3 id="Done"><a href="#Done" class="headerlink" title="Done"></a>Done</h3><h3 id="Others"><a href="#Others" class="headerlink" title="Others"></a>Others</h3><ul>
+<li>Python for Data Analysis</li>
+</ul>
 
       
     </div>
@@ -461,7 +420,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/机器学习/" rel="tag"><i class="fa fa-tag"></i> 机器学习</a>
+            <a href="/tags/Books/" rel="tag"><i class="fa fa-tag"></i> Books</a>
           
         </div>
       
@@ -474,8 +433,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/11/20/Virtualenv/" rel="next" title="Virtualenv">
-                <i class="fa fa-chevron-left"></i> Virtualenv
+              <a href="/2018/12/27/SSR配置/" rel="next" title="SSR配置">
+                <i class="fa fa-chevron-left"></i> SSR配置
               </a>
             
           </div>
@@ -484,8 +443,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/11/21/随机游走算法/" rel="prev" title="随机游走算法">
-                随机游走算法 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/04/03/Python实用的内置库函数/" rel="prev" title="Python实用的内置库函数">
+                Python实用的内置库函数 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -620,7 +579,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#混淆矩阵"><span class="nav-number">1.</span> <span class="nav-text">混淆矩阵</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ROC曲线"><span class="nav-number">2.</span> <span class="nav-text">ROC曲线</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#AUC"><span class="nav-number">3.</span> <span class="nav-text">AUC</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#为什么AUC值越大，分类器的分类效果越好"><span class="nav-number">3.1.</span> <span class="nav-text">为什么AUC值越大，分类器的分类效果越好</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ROC优点"><span class="nav-number">4.</span> <span class="nav-text">ROC优点</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#To-Read"><span class="nav-number">1.</span> <span class="nav-text">To Read</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Reading"><span class="nav-number">2.</span> <span class="nav-text">Reading</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Done"><span class="nav-number">3.</span> <span class="nav-text">Done</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Others"><span class="nav-number">4.</span> <span class="nav-text">Others</span></a></li></ol></div>
             
 
           </div>
